@@ -1,0 +1,62 @@
+/* ================= css/style.css ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* LOGO SUAVE NO FUNDO */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('../logo.png') center no-repeat;
+  background-size: 400px;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* BLOCO DE CORES PURO (SEM TRANSPARÊNCIA) */
+.hero {
+  height: 350px;
+
+  background: linear-gradient(
+    to bottom,
+    #ff6b6b 0% 33.33%,   /* vermelho mais claro */
+    #ffe066 33.33% 66.66%, /* amarelo suave */
+    #4dabf7 66.66% 100%  /* azul mais claro */
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-hero {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}

@@ -1,0 +1,60 @@
+/* ================= index.html ================= */
+  <title>KDE Transporte Escolar</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- FUNDO COM LOGO SUAVE -->
+  <div class="background"></div>
+
+  <header>
+    <img src="logo.png" alt="Logo KDE" class="logo">
+    <h1>KDE Transporte Escolar</h1>
+    <p>Segurança, conforto e confiança</p>
+  </header>
+
+  <!-- BLOCO DE CORES (IGUAL VAN) -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="logo.png" alt="Logo KDE" class="logo-hero">
+      <h2>Seu filho seguro todos os dias!</h2>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Contato</h2>
+    <form onsubmit="enviarWhats(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <br>
+      <input type="tel" id="telefone" placeholder="Seu telefone" required>
+      <br>
+      <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+      <br>
+      <button class="btn" type="submit">Enviar via WhatsApp</button>
+    </form>
+  </section>
+
+  <a class="whatsapp" href="https://wa.me/5543984742725" target="_blank">💬</a>
+
+  <footer>
+    <p>📞 (43) 98474-2725</p>
+  </footer>
+
+  <script>
+    function enviarWhats(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      const texto = `Olá, meu nome é ${nome}%0ATelefone: ${telefone}%0AMensagem: ${mensagem}`;
+      const url = `https://wa.me/5543984742725?text=${texto}`;
+
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
